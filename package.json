@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",  // Use 'node' instead of 'nodemon' for production
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Codewave",
@@ -22,6 +21,6 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    // Remove 'nodemon' from devDependencies if not needed in production
   }
 }
