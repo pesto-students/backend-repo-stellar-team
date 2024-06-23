@@ -17,8 +17,8 @@ Stellar Task Manager is a web application designed to streamline team task manag
 # Demo
 - **Demo Link**: [Stellar Task Manager API](https://stellar-task-manager.netlify.app)
 - **Test Credentials**:
-  - **Email**: mandar@gmail.com
-  - **Password**: mandar
+  - **Email**: pestp@project.com
+  - **Password**: 1111111
 <br/>
 
 # Installation
