@@ -20,6 +20,7 @@ app.use(
     origin: ["http://localhost:3000", "http://localhost:3001" , "https://stellar-task-manager.netlify.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
