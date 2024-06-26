@@ -21,7 +21,7 @@ app.use(cookieParser());
 // Middleware for CORS
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://stellar-task-manager.netlify.app"],
+    origin: ["stellar-task-manager.netlify.app","http://localhost:3000", "http://localhost:3001", "https://stellar-task-manager.netlify.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
