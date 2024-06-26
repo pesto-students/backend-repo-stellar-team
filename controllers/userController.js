@@ -59,7 +59,6 @@ const registerUser = asyncHandler(async (req, res) => {
   });
 
   if (user) {
-    console.log("isAdmin = ",isAdmin);
     isAdmin ? createJWT(res, user._id) : null;
 
     user.password = undefined;

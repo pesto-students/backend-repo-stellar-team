@@ -2,19 +2,15 @@ import jwt from "jsonwebtoken";
 
 const createJWT = (res, userId) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
-    expiresIn: "1h",
+    expiresIn: "1d",
   });
 
-  console.log('Generated Token:', token); // Log the token for debugging
-
-  res.cookie('token', token, {
+  res.cookie("token", token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'none',
-    domain: "stellar-task-manager.netlify.app",
-    maxAge: 3600000, // 1 hour
+    secure: process.env.NODE_ENV !== "development", // Use secure cookies in production
+    sameSite: "none", // Prevent CSRF attacks
+    maxAge: 1 * 24 * 60 * 60 * 1000, // 1 days
   });
-
-  console.log('Set-Cookie Header:', res.getHeaders()['set-cookie']); // Log Set-Cookie header for debugging
 };
+
 export default createJWT;
