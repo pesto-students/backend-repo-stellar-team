@@ -128,7 +128,7 @@ const updateTask = asyncHandler(async (req, res) => {
 
     res
       .status(200)
-      .json({ status: true, message: "Task duplicated successfully." });
+      .json({ status: true, message: "Action Taken successfully." });
   } catch (error) {
     return res.status(400).json({ status: false, message: error.message });
   }
